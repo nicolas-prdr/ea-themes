@@ -1,0 +1,42 @@
+{#
+/**
+ * @file
+ * Template for Navbar component.
+ *
+ * Available config:
+ * - container: fixed | fluid.
+ * - placement: default | fixed-top | fixed-bottom | sticky-top
+ * - color: light | dark
+ * - navbar_expand: sm | md | lg | xl
+ * - utility_classes: An array of utility classes.
+ *
+ * Available blocks:
+ * - branding
+ * - left
+ * - right
+ */
+#}
+
+{{ attach_library('radix/navbar') }}
+
+{% set container = container == 'fixed' ? 'container' : false %}
+{% set placement = placement ?? '' %}
+{% set color = color ?? 'light' %}
+{% set navbar_expand = navbar_expand ?? 'lg' %}
+
+<nav class="navbar navbar-expand-{{ navbar_expand }} justify-content-between navbar-{{ color }} {{ placement }} {{ utility_classes|join(' ') }}">
+	{% if container %}
+		<div class="{{ container }}">
+		{% endif %}
+
+		{% block branding %}
+			{{ branding }}
+		{% endblock %}
+
+
+		<p class="navbar--baseline">Tu doctor de viaje</p>
+
+		{% if container %}
+		</div>
+	{% endif %}
+</nav>

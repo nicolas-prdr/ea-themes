@@ -1,0 +1,25 @@
+name: EA Romania
+type: theme
+base theme: ea
+description: EA Romania sub theme (Arial font).
+package: EA
+core: 8.x
+core_version_requirement: ^8 || ^9
+libraries:
+  - ea_fiatc/global
+logo: 'logo.png'
+regions:
+  navbar_branding: Navbar branding
+  navbar_left:  Navbar left
+  navbar_right: Navbar right
+  header: Header
+  content: Content
+  page_bottom: Page bottom
+  footer: Footer
+libraries-override:
+  ea/style:
+    css:
+      base:
+        assets/css/fonts.css: false
+      theme:
+        assets/css/ea.style.css: css/ea-ext.style.css

@@ -1,0 +1,27 @@
+name: EA Pulse
+type: theme
+base theme: ea
+description: Pulse subtheme.
+package: EA
+core: 8.x
+core_version_requirement: ^8 || ^9
+
+logo: logo.png
+
+regions:
+  navbar_branding: Navbar branding
+  navbar_left:  Navbar left
+  navbar_right: Navbar right
+  header: Header
+  content: Content
+  page_bottom: Page bottom
+  footer: Footer
+
+libraries:
+  - ea_pulse/global
+
+libraries-override:
+  ea/style:
+    css:
+      theme:
+        assets/css/ea.style.css: css/ea-pulse.style.css

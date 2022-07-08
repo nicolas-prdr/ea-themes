@@ -1,0 +1,47 @@
+.checkout-form--login {
+  .checkout-pane-login {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+
+    .form-wrapper__login-option {
+      width: 100%;
+      margin: 0;
+      padding: rem(30) 0 rem(40) 0;
+
+      &#edit-login-guest {
+        border-bottom: solid rem(1) $light;
+        z-index: 3;
+
+        &:after {
+          content: "OR";
+          position: absolute;
+          left: 50%;
+          bottom: 0;
+          transform: translate(-50%, 50%);
+          width: 30px;
+          height: 30px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: $light;
+          font-size: rem(12);
+          font-weight: bold;
+          color: $white;
+          border-radius: 50%;
+        }
+      }
+    }
+
+    .card-header {
+      background-color: transparent;
+
+      legend {
+        font-size: rem(35);
+        font-weight: bold;
+        text-align: center;
+        padding-bottom: rem(16);
+        line-height: $headings-line-height;
+      }
+    }
+  }
+}

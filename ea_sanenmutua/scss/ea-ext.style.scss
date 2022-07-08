@@ -1,0 +1,10 @@
+$primary: #0082CA;
+$secondary: #00A0D7;
+
+$dark: $secondary;
+
+@import "../../ea/src/scss/ea.style.scss";
+
+.navbar .navbar-brand img {
+  width: 200px;
+}

@@ -1,0 +1,11 @@
+$primary: #006938;
+$secondary: #4c4b4d;
+
+$dark: $secondary;
+$body-color: rgb(39, 36, 36);
+
+@import "../../ea/src/scss/ea.style.scss";
+
+.navbar .navbar-brand img {
+  width: 200px;
+}

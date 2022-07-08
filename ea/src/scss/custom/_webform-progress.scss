@@ -1,0 +1,67 @@
+.webform-progress-tracker {
+  margin: 20px 0 40px 0;
+
+  .progress-step {
+
+    &[title="Complete"] {
+      display: none;
+    }
+
+    .progress-text {
+      display: block;
+
+      @media (max-width: 520px) {
+        font-size: rem(13);
+        line-height: 1.3;
+      }
+    }
+
+    .progress-title {
+      color: $light;
+    }
+
+    .progress-marker {
+      &:before {
+        background-color: white !important;
+        border: solid 1px $light;
+        font-size: 0;
+        width: 20px;
+        height: 20px;
+        top: 1px;
+      }
+
+      &:after {
+        background-color: $light;
+        height: 1px;
+      }
+    }
+
+    &.is-complete {
+      .progress-marker {
+        &:before {
+          background-color: $primary !important;
+          color: $primary;
+          border: none;
+        }
+      }
+    }
+
+    &.is-active {
+      .progress-title {
+        color: $secondary;
+        font-weight: 500;
+      }
+
+      .progress-marker {
+        color: $primary;
+
+        &:before {
+          // background-color: $primary !important;
+          border: none;
+          box-shadow: 0 1px 7px $primary;
+          color: $white;
+        }
+      }
+    }
+  }
+}

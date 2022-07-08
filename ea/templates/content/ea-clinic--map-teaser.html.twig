@@ -1,0 +1,26 @@
+{#
+/**
+ * @file
+ * Default theme implementation to present a clinic entity.
+ *
+ * This template is used when viewing a registered clinic's page,
+ * e.g., /admin/content/ea-clinic)/123. 123 being the clinic's ID.
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ *   print a subset such as 'content.title'.
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_ea_clinic()
+ */
+#}
+<div class="wrapper-clinic">
+  <div class="wrapper-select">
+    <h2>{{ content.name }}</h2>
+    <div class="clinic-info-container">
+      {{ content.field_address }}
+    </div>
+    <a href="#" class="see-more" data-id="{{ ea_clinic.id() }}">{{ "See more informations" }}</a>
+  </div>
+</div>
+

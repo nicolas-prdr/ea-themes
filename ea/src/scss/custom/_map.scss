@@ -1,0 +1,276 @@
+.wrapper-map {
+  height: calc(100vh - 250px);
+  min-height: 350px;
+
+  .wrapper-clinic {
+    margin-bottom: 6px;
+
+    .wrapper-select {
+      border-radius: 5px;
+      padding: 20px;
+      box-shadow: 0 2px 7px rgba($black, .2);
+      max-width: 300px;
+      width: calc(100% - 20px);
+
+      .address {
+        margin-bottom: 6px;
+      }
+
+      .ea-clinic__field-address {
+        font-size: rem(13);
+
+        .field__label {
+          color: $light;
+          font-weight: unset !important;
+        }
+      }
+    }
+
+    .see-more {
+      font-size: rem(13);
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      &:after {
+        content: '';
+        display: block;
+        border-right: 2px solid $primary;
+        border-bottom: 2px solid $primary;
+        width: 8px; height: 8px;
+        transform: rotate(-45deg) translateY(1px);
+        margin-left: rem(4);
+      }
+    }
+  }
+
+  .wrapper-header {
+    font-size: rem(13);
+
+    .wrapper-input-search {
+      height: auto;
+      min-height: 50px;
+      margin: 20px auto 6px auto;
+      position: relative;
+      width: calc(100% - 20px);
+      max-width: 300px;
+    }
+
+    #search {
+      height: 50px;
+      border: none;
+      outline: none;
+      padding: 18px;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      transform: scaleX(0);
+      transition: transform 300ms ease;
+      transform-origin: right center;
+      display: block !important;
+    }
+
+    .search-icon {
+      font-size: 0;
+      background-color: $white;
+      width: 50px;
+      min-width: 50px;
+      height: 50px;
+      background-image: url(../images/svg/search.svg);
+      background-repeat: no-repeat;
+      background-position: center center;
+      border-radius: 5px;
+      box-shadow: 0 2px 7px rgba($black, .2);
+      border: none;
+      // top: 20px;
+      // right: 20px;
+      top: 0;
+      right: 0;
+    }
+  }
+
+  &.search-open {
+    .wrapper-select {
+      cursor: pointer;
+    }
+
+    .wrapper-header {
+      .wrapper-input-search {
+        box-shadow: 0 2px 7px rgba($black, .2);
+        transition: box-shadow 0ms ease;
+        transition-delay: 300ms
+      }
+
+      #search {
+        transform: scaleX(1);
+      }
+
+      .search-icon {
+        box-shadow: none;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+    }
+  }
+
+  #hide_list {
+    background-color: $secondary;
+    color: $white;
+    background-image: url(../images/svg/arrow-down.svg);
+    background-size: 12px 12px;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: calc(100% - 22px);
+    font-size: rem(15);
+    border-radius: rem(5);
+    padding: rem(17) rem(45) rem(17) rem(22);
+    line-height: 1;
+    border: none;
+    margin-right: 0;
+    margin-left: auto;
+    position: sticky !important;
+    right: calc((100% - 300px) / 2) !important;
+    bottom: 20px !important;
+  }
+
+  .footer-action {
+    max-width: 300px;
+    width: calc(100% - 20px);
+    justify-content: space-between;
+    height: auto;
+    min-height: 50px;
+    margin: 6px auto 20px auto;
+
+    input {
+      border: none;
+    }
+
+    #choose_this_place {
+      font-size: rem(15);
+      background-color: $primary;
+      color: $white;
+      padding: rem(17) rem(22) rem(17) rem(22);
+      border-radius: rem(5);
+      line-height: 1;
+
+      &[disabled] {
+        background-color: $light2;
+        color: rgba($dark-grey, .2);
+      }
+    }
+
+    .show_list {
+      background-color: $secondary;
+      color: $white;
+      background-image: url(../images/svg/burger.svg);
+      background-size: 12px 12px;
+      background-repeat: no-repeat;
+      background-position-y: center;
+      background-position-x: calc(100% - 22px);
+      font-size: rem(15);
+      border-radius: rem(5);
+      padding: rem(17) rem(50) rem(17) rem(22);
+      line-height: 1;
+    }
+  }
+
+  .wrapper-modal {
+    // position: absolute;
+    background-color: transparent;
+    z-index: 1001;
+
+    .wrapper-full-content {
+      font-size: rem(15);
+      position: relative;
+      padding: rem(20) rem(25);
+      max-width: 500px;
+      width: 95%;
+      margin: auto;
+      background-color: $white;
+
+      .close {
+        font-size: 0;
+        width: 100vw;
+        max-width: 520px;
+        height: 25px;
+        display: block;
+
+        &:before, &:after {
+          position: absolute;
+          right: 25px;
+          top: 20px;
+          content: ' ';
+          height: 25px;
+          width: 2px;
+          border-radius: 3px;
+          background-color: $secondary;
+        }
+        &:before {
+          transform: rotate(45deg);
+        }
+        &:after {
+          transform: rotate(-45deg);
+        }
+      }
+
+      .ea-clinic__field-address, .ea-clinic__field-speciality, .ea-clinic__opening-hours {
+
+        .field__label {
+          color: $light;
+          font-size: rem(14);
+          font-weight: 500 !important;
+        }
+      }
+
+      .choose-this-place {
+        font-size: rem(15);
+        background-color: $primary;
+        color: $white;
+        padding: rem(17) rem(22) rem(17) rem(22);
+        border-radius: rem(5);
+        line-height: 1;
+        text-decoration: none;
+        display: block;
+        width: 100%;
+        text-align: center;
+
+        &[disabled] {
+          background-color: $light2;
+          color: rgba($dark-grey, .2);
+        }
+      }
+    }
+  }
+}
+
+.leaflet-control-container {
+  display: none;
+}
+
+.toggle-map {
+  background-color: $secondary;
+  border-color: $secondary !important;
+  color: $white;
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+
+  &:after {
+    content: '';
+    display: block;
+    background-image: url(../images/svg/next-arrow.svg);
+    width: 10px;
+    height: 10px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+
+  &:hover {
+    color: $white;
+    background-color: darken($secondary, 5%);
+  }
+}

@@ -1,0 +1,5 @@
+.btn{
+  @extend .shadow-sm;
+  text-transform: uppercase;
+  font-weight: $font-weight-light;
+}

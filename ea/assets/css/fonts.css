@@ -1,0 +1,28 @@
+/**
+ * @file
+ * Base Fonts.
+ */
+@font-face {
+  font-family: "Dax";
+  src: url("../fonts/Dax-Regular.woff2") format("woff2"),
+    url("../fonts/Dax-Regular.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Dax";
+  src: url("../fonts/Dax-Medium.woff2") format("woff2"),
+    url("../fonts/Dax-Medium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Dax";
+  src: url("../fonts/Dax-Bold.woff2") format("woff2"),
+    url("../fonts/Dax-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}

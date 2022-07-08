@@ -1,0 +1,78 @@
+{#
+/**
+ * @file
+ * Template for the order receipt.
+ *
+ * Available variables:
+ * - order_entity: The order entity.
+ * - billing_information: The billing information.
+ * - shipping_information: The shipping information.
+ * - payment_method: The payment method.
+ * - totals: An array of order totals values with the following keys:
+ *   - subtotal: The order subtotal price.
+ *   - adjustments: An array of adjustment totals:
+ *     - type: The adjustment type.
+ *     - label: The adjustment label.
+ *     - total: The adjustment total price.
+ *     - weight: The adjustment weight, taken from the adjustment type.
+ *   - total: The order total price.
+ *
+ * @ingroup themeable
+ */
+#}
+<table style="
+						        margin: 20px 0 50px 0;
+						        width: 100%;
+						        border-collapse: collapse;
+						        border: 7px solid #c4c4c4;
+						      ">
+	<thead style="background: #f4f4f4; font-size: 20px; font-weight: bold;">
+		<tr style="border-bottom: 1px solid #c4c4c4;">
+			<th colspan="3" style="padding: 20px 20px; text-align: left;">
+				{{ 'Order' | t }}
+				<span class="order" style="color: #00239c;">{{ order_entity.getOrderNumber }}</span>
+				{{ 'details: ' | t }}
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for order_item in order_entity.getItems %}
+			<tr style="border-bottom: 1px solid #c4c4c4;">
+				<td style="padding: 20px 20px; text-align: left;">
+					{{ order_item.getQuantity|number_format }}x</td>
+				<td style="padding: 20px 20px; text-align: left;">
+					{{ order_item.getPurchasedEntity.product_id.entity.label }}
+				</td>
+				<td style="padding: 20px 20px; text-align: left;">{{ order_item.getTotalPrice|commerce_price_format }}</td>
+			</tr>
+		{% endfor %}
+	</tbody>
+	<tfoot style="
+									          text-align: right;
+									          font-size: 20px;
+									          font-weight: bold;
+									          border-top: 7px solid #c4c4c4;
+									        ">
+		<tr style="border-bottom: 1px solid #c4c4c4;">
+			<th class="total-amount" colspan="2" style="padding: 20px 20px; text-align: right;">
+				{{'Total Amount:' | t }}
+			</th>
+			<td class="total" style="
+															              padding: 20px 20px;
+															              text-align: right;
+															              background-color: #c4c4c4;
+															            ">
+				{{totals.subtotal|commerce_price_format}}
+			</td>
+		</tr>
+	</tfoot>
+</table>
+
+<footer style="
+						        background-color: #f4f4f4;
+						        font-size: 12px;
+						        text-align: center;
+						        padding: 30px;
+						        line-height: 150%;
+						      ">{{ footer }}
+	</footer>

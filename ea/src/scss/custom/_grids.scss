@@ -1,0 +1,12 @@
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 12px;
+
+  p {
+    text-align: center
+  }
+  & > h3:nth-of-type(even) {
+    color: $primary;
+  }
+}

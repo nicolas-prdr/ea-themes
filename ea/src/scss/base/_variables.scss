@@ -1,0 +1,71 @@
+// Colors
+$blue: #13aee2;
+$dark: #072895 !default;
+$light: #CDCDCD;
+$light2: #F4F4F4;
+$dark-grey: #6c757d;
+$red: #DC3545;
+
+// $pulseP: #4C4B4D;
+// $pulseS: #ED232E;
+
+// $primary: $pulseS !default;
+// $secondary: $pulseP !default;
+$primary: $blue !default;
+$secondary: $dark !default;
+$body-color: $secondary !default;
+$shadow: rgba(0, 0, 0, .15);
+$box-shadow: 0 4px 20px $shadow;
+$box-shadow-sm: rem(4) rem(4) rem(13) $shadow;
+// The contrast ratio to reach against white, to determine if color changes from "light" to "dark". Acceptable values for WCAG 2.0 are 3, 4.5 and 7.
+// See https://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast
+$min-contrast-ratio: 2;
+$btn-border-radius: 0;
+$btn-border-radius-sm: 0;
+$btn-border-radius-lg: 0;
+
+// scss-docs-start spacer-variables-maps
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer / 4,
+  2: $spacer / 2,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+);
+
+// Fonts
+$font-family-sans-serif: "Dax", sans-serif !default;
+$font-weight-lighter: lighter;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+$font-weight-bolder: bolder;
+
+$font-weight-base: $font-weight-light;
+
+// Headings
+$headings-margin-bottom: $spacer;
+$headings-font-family: null;
+$headings-font-style: null;
+$headings-font-weight: $font-weight-bold;
+$headings-line-height: 1.2;
+$headings-color: null;
+
+// scss-docs-start container-max-widths
+// On garde une largeur max unique
+// $unique_width: 540px;
+$container-max-widths: (
+  sm: 540px,
+  md: 542px,
+  lg: 544px,
+  xl: 546px,
+  xxl: 548px
+  // sm: 840px,
+  // md: 840px,
+  // lg: 840px,
+  // xl: 840px,
+  // xxl: 840px
+);
+// scss-docs-end container-max-widths

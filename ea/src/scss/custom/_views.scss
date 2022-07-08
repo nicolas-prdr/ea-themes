@@ -1,0 +1,15 @@
+.views-element-container {
+  .services-grid {
+    & > header {
+      grid-column: 1 / -1;
+    }
+    & > h3 {
+      padding-top: $spacer;
+      grid-column: 1 / -1;
+    }
+    .product-type-desc {
+      text-align: left;
+      grid-column: 1 / -1;
+    }
+  }
+}

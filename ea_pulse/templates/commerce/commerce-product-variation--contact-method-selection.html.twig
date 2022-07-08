@@ -1,0 +1,37 @@
+{#
+/**
+ * @file
+ *
+ * Default template for product variations.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the wrapper.
+ * - product_variation: The rendered product variation fields.
+ *   Use 'product_variation' to print them all, or print a subset such as
+ *   'product_variation.title'. Use the following code to exclude the
+ *   printing of a given field:
+ *   @code
+ *   {{ product_variation|without('title') }}
+ *   @endcode
+ * - product_variation_entity: The product variation entity.
+ * - product_url: The product URL.
+ *
+ * @ingroup themeable
+ */
+#}
+
+
+<div{{attributes.addClass('commerce-product-variation')}}>
+	<label for="{{ select_form_submit_input_id }}" class="commerce-product-variation--wrapper">
+		<div class="text-primary">
+			{{ product_variation.field_pictogram}}
+		</div>
+		<div class="commerce-product-variation--content">
+			{{ product_variation.attribute_contact_method}}
+			{{ product_variation.field_info}}
+		</div>
+		<div class="visually-hidden">
+			{{ select_form }}
+		</div>
+	</label>
+</div>

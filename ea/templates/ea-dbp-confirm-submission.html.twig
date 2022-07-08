@@ -1,0 +1,69 @@
+<div class="confirm">
+	{% if product %}
+		<h2>{{ product }}</h2>
+	{% endif %}
+	<p class="confirm__intro--title">{{ "You have chosen the following services:"|t }}</p>
+	<ul class="confirm__intro--list">
+		{% for service in services %}
+			<li>{{ service }}</li>
+		{% endfor %}
+	</ul>
+	{% if favorite_doctor %}
+		<p class="confirm__intro--title pb-3">{{ 'Favorite doctor:' | t }}
+			<strong>{{ favorite_doctor }}</strong>
+		</p>
+	{% endif %}
+	{% if estimate %}
+		<p class="confirm__intro--title pb-3">✔️ {{ 'Estimate requested' | t }}
+		{% endif %}
+		<div class="confirm--wrapper">
+			<div class="confirm__clinic">
+				<i>
+					<svg xmlns="http://www.w3.org/2000/svg" width="12" height="19.394" viewbox="0 0 12 19.394">
+						<path id="Fill_1" data-name="Fill 1" d="M6,19.394H6c-.06-.091-6-9.106-6-12.727C0,2.99,2.692,0,6,0s6,2.99,6,6.666c0,3.62-5.939,12.636-6,12.727Zm.056-15a2,2,0,1,0,2,2A2,2,0,0,0,6.056,4.4Z" fill="#ef2c2a"/>
+					</svg>
+				</i>
+				<div class="confirm__clinic--content">
+					<h3>{{ clinic_name }}</h3>
+					<p>{{ clinic_address.address_line1 }}
+						{{ clinic_address.address_line2 }}
+					</p>
+					<p>{{ clinic_address.locality }}</p>
+				</div>
+			</div>
+			<hr/>
+			<span class="confirm--title">{{ "First date"|t }}</span>
+			<p class="confirm--date">{{ date_1 }}</p>
+			{% if time_1 and time_2 %}
+				<p class="confirm--time">{{ "From"|t }}
+					{{ time_1 }}
+					{{ "To"|t }}
+					{{ time_2 }}</p>
+			{% endif %}
+			{% if time_3 and time_4 %}
+				<p class="confirm--time">{{ "From"|t }}
+					{{ time_3 }}
+					{{ "To"|t }}
+					{{ time_4 }}</p>
+			{% endif %}
+			<hr/>
+			{% if date_2 %}
+				<span class="confirm--title">{{ "Second date"|t }}</span>
+				<p class="confirm--date">{{ date_2 }}</p>
+			{% endif %}
+			{% if time_5 and time_6 %}
+				<p class="confirm--time">{{ "From"|t }}
+					{{ time_5 }}
+					{{ "To"|t }}
+					{{ time_6 }}</p>
+			{% endif %}
+			{% if time_7 and time_8 %}
+				<p class="confirm--time">{{ "From"|t }}
+					{{ time_7 }}
+					{{ "To"|t }}
+					{{ time_8 }}</p>
+			{% endif %}
+			<hr/>
+			<span class="confirm--city">{{ clinic_address.locality }}</span>
+		</div>
+	</div>

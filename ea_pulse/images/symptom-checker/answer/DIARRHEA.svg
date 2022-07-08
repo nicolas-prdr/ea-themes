@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11.61 27.14">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #002395;
+      }
+    </style>
+  </defs>
+  <title>EA-diarrhea</title>
+  <g id="Calque_2" data-name="Calque 2">
+    <g id="Calque_1-2" data-name="Calque 1">
+      <g id="transfusion-human">
+        <path id="Tracé_253" data-name="Tracé 253" class="cls-1" d="M5.8,9.67a4.84,4.84,0,1,1,4.84-4.83h0A4.84,4.84,0,0,1,5.8,9.67Zm0-7.74a2.9,2.9,0,1,0,2.9,2.9h0a2.9,2.9,0,0,0-2.9-2.9Z"/>
+        <path id="Tracé_254" data-name="Tracé 254" class="cls-1" d="M2.9,26.83l-.85-7.49H1a1,1,0,0,1-1-1V15.47a5.81,5.81,0,0,1,11.61,0v2.9a1,1,0,0,1-1,1H9.56l-.86,6.9a1,1,0,0,1-1,.84S3,27.32,2.9,26.83Zm4-1.68.87-6.89a1,1,0,0,1,.95-.85h1V15.47a3.87,3.87,0,1,0-7.74,0v1.94h1c.49,0,.9.36,1.82,7.73Z"/>
+      </g>
+    </g>
+  </g>
+</svg>

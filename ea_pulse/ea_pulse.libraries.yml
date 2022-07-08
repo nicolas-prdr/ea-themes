@@ -1,0 +1,4 @@
+# Main theme library.
+global:
+  js:
+    js/ea-pulse.js: {}

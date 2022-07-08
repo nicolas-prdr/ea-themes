@@ -1,0 +1,240 @@
+.checkout-form--order-information, .commerce-checkout-flow {
+  .layout-checkout-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: rem(30);
+
+    @media screen and (max-width: 600px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    &.clearfix {
+      &::after {
+        content: none !important;
+      }
+    }
+
+    input,
+    select {
+      padding: rem(8) rem(16);
+    }
+
+    input[type="radio"] {
+      padding: 0;
+    }
+
+    input[type="checkbox"] {
+      margin-right: rem(6);
+      width: rem(16);
+      height: rem(16);
+      padding: 0;
+    }
+
+    .layout-region {
+      width: 100%;
+      padding: 0;
+
+      #edit-contact-information,
+      #edit-payment-information {
+        margin: 0;
+
+        .card-header {
+          background-color: transparent;
+
+          legend {
+            font-size: rem(25);
+            font-weight: bold;
+            padding-bottom: rem(16);
+            line-height: $headings-line-height;
+            color: $secondary;
+
+            span {
+              color: $secondary;
+            }
+          }
+        }
+      }
+
+      .card-header {
+        .fieldset-legend {
+          color: $secondary;
+        }
+      }
+
+      #edit-contact-information {
+        margin-bottom: rem(40);
+      }
+    }
+
+    .layout-region-checkout-secondary {
+      background-color: $light2;
+      height: fit-content;
+      padding: rem(30);
+
+      h3 {
+        text-align: center;
+        border-bottom: solid rem(1) $light;
+        margin-bottom: 0;
+        padding-bottom: rem(20);
+        margin-bottom: rem(20);
+      }
+
+      .checkout-order-summary {
+
+        table {
+          width: 100%;
+        }
+
+        td {
+          font-size: rem(13);
+        }
+
+        .order-total-line {
+          line-height: 1;
+          padding-right: 0;
+          padding-left: 0;
+
+          &:first-of-type {
+            padding-top: rem(20);
+            margin-top: rem(20);
+            border-top: solid rem(1) $light;
+          }
+
+          span {
+            font-size: rem(13);
+          }
+        }
+      }
+    }
+  }
+
+  .form-item {
+    width: 100%;
+  }
+
+  #edit-actions-next {
+    background-image: url(../images/svg/next-arrow.svg);
+    background-size: 18px 15px;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: calc(100% - 22px);
+    font-size: rem(15);
+    font-weight: bold;
+    padding: rem(17) rem(50) rem(17) rem(22);
+    border-radius: rem(5);
+    margin-right: rem(20);
+    line-height: 1;
+    width: fit-content;
+
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+
+  #edit-actions {
+    flex-direction: column;
+    margin: 0;
+
+    .link--previous {
+      display: block;
+      margin-top: rem(10);
+      background-color: $dark-grey;
+      color: $white;
+      text-decoration: none;
+      background-image: url(../images/svg/prev-arrow.svg);
+      background-size: 18px 15px;
+      background-repeat: no-repeat;
+      background-position-y: center;
+      background-position-x: 22px;
+      font-size: rem(15);
+      font-weight: bold;
+      padding: rem(17) rem(22) rem(17) rem(50);
+      border-radius: rem(5);
+      margin-right: rem(20);
+      line-height: 1;
+      width: fit-content;
+
+      &:focus {
+        outline: none;
+        box-shadow: none;
+      }
+    }
+  }
+
+  .StripeElement--empty {
+    font-size: rem(13) !important;
+    padding: rem(8) rem(16) !important;
+    margin-bottom: rem(8) !important;
+    outline: none !important;
+    box-shadow: none !important;
+    width: 100% !important;
+    border-radius: rem(4) !important;
+
+    &:focus {
+      outline: none !important;
+      box-shadow: none !important;
+    }
+  }
+}
+
+#stripe-submit {
+  background-image: url(../images/svg/next-arrow.svg);
+  background-size: 18px 15px;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: calc(100% - 22px);
+  font-size: rem(15);
+  font-weight: bold;
+  padding: rem(17) rem(50) rem(17) rem(22);
+  border-radius: rem(5);
+  line-height: 1;
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+#edit-payment-information-add-payment-method-payment-details {
+  margin-bottom: rem(20);
+}
+
+.address-book-edit-button {
+  background-color: $secondary;
+  color: $white;
+  font-size: rem(15);
+  font-weight: bold;
+  padding: rem(17) rem(22) rem(17) rem(22) !important;
+  border-radius: rem(5);
+  line-height: 1;
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+.commerce-checkout-flow-multistep-default {
+  width: 100% !important;
+}
+
+
+.body--checkout-form {
+  .container {
+    max-width: 840px !important;
+  }
+}
+
+form[data-drupal-form-fields="edit-login-guest-continue,edit-login-returning-customer-name,edit-login-returning-customer-password,edit-login-returning-customer-submit"] {
+  .layout-checkout-form  {
+    display: block !important;
+  }
+}
+
+.checkout-form--complete {
+  .layout-checkout-form {
+    grid-template-columns: repeat(1, 1fr) !important;
+    text-align: center !important;
+  }
+}

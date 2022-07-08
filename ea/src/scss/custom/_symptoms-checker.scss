@@ -1,0 +1,86 @@
+.ea-symptom-checker-symptom-checker {
+  #edit-choices {
+    margin-bottom: rem(20);
+
+    label {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      input {
+        font-size: 0.875rem;
+        font-weight: bold;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: $secondary;
+        text-transform: none;
+        background-color: $white;
+        border-radius: rem(5);
+        border: solid rem(1) $light;
+        background-image: url(../images/svg/arrow-red.svg);
+        background-size: 10px 15px;
+        background-repeat: no-repeat;
+        background-position-y: center;
+        background-position-x: calc(100% - 20px);
+        width: 100%;
+
+        &:hover {
+          background-color: $secondary;
+          border-color: $secondary;
+          color: $white;
+        }
+
+        &:focus {
+          box-shadow: none;
+          outline: none;
+        }
+      }
+
+      img {
+        width: auto;
+        height: auto;
+        max-width: 35px;
+        max-height: 35px;
+      }
+
+      &.has-picto {
+        padding: 20px;
+        border-radius: rem(5);
+        border: solid rem(1) $light;
+
+        input {
+          width: 100%;
+          border: none;
+          border-radius: 0;
+          padding: 0;
+          margin-left: 10px;
+          background-position-x: 100%;
+        }
+
+        &:hover {
+          background-color: $secondary;
+          border-color: $secondary;
+
+          img {
+            filter: invert(1);
+          }
+
+          input {
+            color: $white;
+          }
+        }
+
+        &:focus {
+          box-shadow: none;
+          outline: none;
+        }
+      }
+    }
+  }
+}
+
+.burger-digestion-center {
+  text-align: center;
+}

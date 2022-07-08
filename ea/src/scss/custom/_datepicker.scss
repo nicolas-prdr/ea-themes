@@ -1,0 +1,125 @@
+#edit-appointment {
+  margin-bottom: rem(12);
+
+  .flatpickr-wrapper {
+    width: 100%;
+    padding-bottom: 25px;
+    margin-bottom: 35px;
+    border-bottom: solid rem(1) $light;
+
+    .numInputWrapper {
+      display: none;
+    }
+
+    .flatpickr-calendar {
+      border: none;
+      box-shadow: none;
+      width: 100%;
+
+      .flatpickr-month {
+        color: $secondary;
+        padding-bottom: 10px;
+      }
+
+      .flatpickr-days, .dayContainer, .flatpickr-rContainer {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+      }
+
+      .flatpickr-monthDropdown-months {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        text-align: center;
+        font-weight: 900;
+      }
+
+      .flatpickr-day {
+        max-width: 100%;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        border: none;
+
+        &:not(.flatpickr-disabled) {
+          color: $secondary;
+        }
+
+        &:hover {
+          border: solid rem(1) $primary;
+          background-color: transparent;
+        }
+
+        &.selected {
+          background-color: $primary;
+          color: $white;
+        }
+      }
+
+      .flatpickr-prev-month, .flatpickr-next-month {
+        top: -6px;
+
+        svg path {
+          fill: $secondary;
+        }
+
+        &:hover {
+          svg path {
+            fill: $primary;
+          }
+        }
+      }
+    }
+  }
+
+  #edit-time-container, #edit-time-container-2, #edit-time-container-3, #edit-time-container-4 {
+    margin-top: 0;
+
+    label {
+      text-transform: capitalize;
+    }
+
+    select {
+      padding: rem(12) rem(20) rem(12) rem(16);
+    }
+  }
+
+  #add-time-slot {
+    text-decoration: none;
+    font-size: rem(13);
+    font-weight: 500;
+  }
+
+  #remove-time-slot-time-container-4, #remove-time-slot-time-container-2 {
+    font-size: 0;
+    height: 15px;
+    width: 15px;
+    display: block;
+    position: relative;
+
+    &:before,
+    &:after {
+      position: absolute;
+      right: 0px;
+      top: 13px;
+      content: ' ';
+      height: 15px;
+      width: 2px;
+      border-radius: 3px;
+      background-color: $secondary;
+    }
+
+    &:before {
+      transform: rotate(45deg);
+    }
+
+    &:after {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+#add-time-slot-time-container-2 {
+  font-size: rem(13);
+}

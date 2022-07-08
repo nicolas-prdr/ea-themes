@@ -1,0 +1,400 @@
+label {
+  font-size: rem(14);
+  color: $primary;
+}
+
+#edit-markup,
+#edit-top {
+  text-align: center;
+  margin-bottom: rem(25);
+}
+
+fieldset {
+  .card-header {
+    background-color: transparent;
+  }
+
+  legend {
+    .fieldset-legend {
+      font-size: rem(14);
+      color: $primary;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+  }
+
+  .iti--allow-dropdown,
+  input {
+    width: 100%;
+  }
+}
+
+// Inputs
+.form-control,
+.form-select,
+.StripeElement--empty {
+  font-size: rem(13);
+  padding: rem(16) rem(20);
+  margin-bottom: rem(8);
+  outline: none;
+  box-shadow: none;
+  width: 100%;
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+#edit-legal-terms {
+  margin-top: rem(40);
+}
+
+fieldset {
+  margin: 0 0 rem(8) 0;
+
+  &.card {
+    border: 0;
+    margin: rem(16) 0 rem(10) 0;
+  }
+
+  .card-header {
+    padding: 0;
+    border: 0;
+  }
+
+  .card-body {
+    padding: 0;
+  }
+}
+
+// Submits
+.form-actions {
+  width: fit-content;
+  margin: 0 auto;
+  outline: none;
+  display: flex !important;
+  justify-content: center;
+
+  #edit-prev {
+    background-image: url(../images/svg/prev-arrow.svg);
+    background-size: 18px 15px;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 22px;
+    font-size: rem(15);
+    font-weight: bold;
+    padding: rem(17) rem(22) rem(17) rem(50);
+    border-radius: rem(5);
+    line-height: 1;
+
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+
+  #edit-submit,
+  #edit-submit--2,
+  #edit-submit--3,
+  .webform-button--next {
+    background-image: url(../images/svg/next-arrow.svg);
+    background-size: 18px 15px;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: calc(100% - 22px);
+    font-size: rem(15);
+    font-weight: bold;
+    padding: rem(17) rem(50) rem(17) rem(22) !important;
+    border-radius: rem(5);
+    line-height: 1;
+
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+}
+
+.btn-cta {
+  background-image: url(../images/svg/next-arrow.svg);
+  background-size: 18px 15px;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: calc(100% - 22px);
+  font-size: rem(15);
+  font-weight: bold;
+  padding: rem(17) rem(50) rem(17) rem(22) !important;
+  border-radius: rem(5);
+  line-height: 1;
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+.ea-bypass-cart-by-pass-cart {
+  .form-actions {
+    width: 100%;
+
+    #edit-submit,
+    #edit-submit--2,
+    #edit-submit--3 {
+      width: 100%;
+      padding: rem(17) rem(22) rem(17) rem(22);
+    }
+  }
+}
+
+.webform-button--previous,
+#edit-previous {
+  background-image: url(../images/svg/prev-arrow.svg);
+  background-size: 18px 15px;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: 22px;
+  font-size: rem(15);
+  font-weight: bold;
+  padding: rem(17) rem(22) rem(17) rem(50);
+  border-radius: rem(5);
+  line-height: 1;
+  background-color: $secondary;
+  border-color: $secondary;
+  margin-right: rem(8);
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  &:hover {
+    background-color: darken($secondary, 7%);
+  }
+}
+
+#edit-previous-container {
+  input {
+    background-image: url(../images/svg/prev-arrow.svg);
+    background-size: 18px 15px;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 22px;
+    font-size: rem(15);
+    font-weight: bold;
+    padding: rem(17) rem(22) rem(17) rem(50);
+    border-radius: rem(5);
+    line-height: 1;
+    width: fit-content;
+    margin: auto;
+    background-color: $secondary;
+    border-color: $secondary;
+    margin-left: 0;
+    // margin-right: rem(8);
+
+    &:hover {
+      background-color: darken($secondary, 7%);
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+}
+
+.block--mainpagecontent {
+  .plugin-container {
+    .btn-secondary {
+      background-image: url(../images/svg/prev-arrow.svg);
+      background-size: 18px 15px;
+      background-repeat: no-repeat;
+      background-position-y: center;
+      background-position-x: 22px;
+      font-size: rem(15);
+      font-weight: bold;
+      padding: rem(17) rem(22) rem(17) rem(22);
+      border-radius: rem(5);
+      line-height: 1;
+
+      &:focus {
+        outline: none;
+        box-shadow: none;
+      }
+    }
+
+    .btn-primary {
+      background-image: url(../images/svg/next-arrow.svg);
+      background-size: 18px 15px;
+      background-repeat: no-repeat;
+      background-position-y: center;
+      background-position-x: calc(100% - 22px);
+      font-size: rem(15);
+      font-weight: bold;
+      padding: rem(17) rem(22) rem(17) rem(22);
+      border-radius: rem(5);
+      line-height: 1;
+
+      &:focus {
+        outline: none;
+        box-shadow: none;
+      }
+    }
+  }
+
+  #edit-wizard-prev {
+    background-color: $secondary !important;
+    border-color: $secondary !important;
+    margin-right: rem(12);
+
+    &:hover {
+      background-color: darken($secondary, 7%) !important;
+      transition: all 0.15s ease-in-out;
+    }
+  }
+
+  #edit-login-returning-customer-submit,
+  #edit-login-guest-continue {
+    background-image: url(../images/svg/next-arrow.svg);
+    background-size: 18px 15px;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: calc(100% - 22px);
+    font-size: rem(15);
+    font-weight: bold;
+    padding: rem(17) rem(50) rem(17) rem(22);
+    border-radius: rem(5);
+    margin-right: rem(20);
+    line-height: 1;
+
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+
+  .form-item-login-returning-customer-password {
+    margin-bottom: rem(25);
+  }
+}
+
+.end-process {
+  display: flex;
+  justify-content: center;
+
+  #edit-button {
+    background-size: 18px 15px;
+    // background-color: $red;
+    // border-color: $red;
+    font-size: rem(15);
+    font-weight: bold;
+    padding: rem(17) rem(22) rem(17) rem(22);
+    border-radius: rem(5);
+    width: fit-content;
+    margin: auto;
+    line-height: 1;
+    transition: background-color 0.15s ease-in-out;
+
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+
+    &:hover {
+      // background-color: darken($red, 7%);
+      transition: background-color 0.15s ease-in-out;
+    }
+  }
+}
+
+.ea-dbp-end {
+  .btn {
+    background-image: url(../images/svg/next-arrow.svg);
+    background-size: 18px 15px;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: calc(100% - 22px);
+    font-size: rem(15);
+    font-weight: bold;
+    padding: rem(17) rem(50) rem(17) rem(22);
+    border-radius: rem(5);
+    line-height: 1;
+    margin: auto;
+    display: block;
+    width: fit-content;
+  }
+}
+
+#edit-actions-submit {
+  background-image: url(../images/svg/next-arrow.svg);
+  background-size: 18px 15px;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: calc(100% - 22px);
+  font-size: rem(15);
+  font-weight: bold;
+  padding: rem(17) rem(50) rem(17) rem(22);
+  border-radius: rem(5);
+  line-height: 1;
+}
+
+#edit-favorite-doctor {
+  &::placeholder {
+    color: $secondary;
+  }
+}
+
+#edit-estimate {
+  @media (max-width: 600px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+  }
+
+  .webform-options-display-buttons-wrapper {
+    .form-item {
+      padding: 0;
+
+      label {
+        border-radius: rem(5);
+        border: solid rem(1) #ced4da;
+        color: $secondary;
+        font-weight: unset;
+        font-size: rem(13);
+
+        &:first-of-type {
+          margin-right: rem(10);
+        }
+
+        &:focus-visible,
+        &:active,
+        &:focus,
+        &:focus-within,
+        &:target,
+        &:checked {
+          border-color: $primary;
+          box-shadow: none;
+        }
+      }
+    }
+  }
+}
+
+.form-item-speciality,
+.form-item-language {
+  display: none;
+}
+
+.form-radios {
+  .is-active {
+    label {
+      border: solid rem(1) $primary !important;
+    }
+  }
+}
+
+.ea-eligibility-eligibility {
+  small {
+    font-style: italic;
+  }
+}

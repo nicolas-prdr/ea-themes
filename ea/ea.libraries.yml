@@ -1,0 +1,12 @@
+style:
+  version: VERSION
+  css:
+    base:
+      assets/css/fonts.css: {}
+    theme:
+      assets/css/ea.style.css: {}
+  js:
+    assets/js/ea.script.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery

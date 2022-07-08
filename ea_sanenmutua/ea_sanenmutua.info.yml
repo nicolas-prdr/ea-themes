@@ -1,0 +1,23 @@
+name: EA Sanen Mutua
+type: theme
+base theme: ea
+description: EA Sanen Mutua sub theme.
+package: EA
+core: 8.x
+core_version_requirement: ^8 || ^9
+libraries:
+  - ea_sanenmutua/global
+logo: logo.jpg
+regions:
+  navbar_branding: Navbar branding
+  navbar_left:  Navbar left
+  navbar_right: Navbar right
+  header: Header
+  content: Content
+  page_bottom: Page bottom
+  footer: Footer
+libraries-override:
+  ea/style:
+    css:
+      theme:
+        assets/css/ea.style.css: css/ea-ext.style.css

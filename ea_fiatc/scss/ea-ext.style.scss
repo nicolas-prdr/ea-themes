@@ -1,0 +1,27 @@
+$primary: #002C5A;
+$secondary: #E2001A;
+
+$dark: $secondary;
+
+@import "../../ea/src/scss/ea.style.scss";
+
+.navbar .navbar-brand img {
+  width: 180px;
+}
+
+.navbar {
+  &--baseline {
+    color: $black;
+    font-size: rem(16);
+    line-height: 1.3;
+    color: $primary;
+    margin: 0;
+    width: 80px;
+    text-align: center;
+  }
+}
+
+
+#ea-eligibility-eligibility #edit-default img {
+  max-width: 60%;
+}

@@ -1,0 +1,56 @@
+// Base
+// -----------------------------------------------------------------------------
+@import "bootstrap";
+
+// Layout
+// -----------------------------------------------------------------------------
+// @import "layout/page.header";
+// @import "layout/page.content";
+// @import "layout/page.footer";
+
+// Component
+// -----------------------------------------------------------------------------
+@import "../../contrib_no_composer/radix/src/components/form/form";
+@import "../../contrib_no_composer/radix/src/components/offcanvas/offcanvas";
+@import "../components/navbar/navbar";
+@import "../components/button/button";
+@import "../components/form/form";
+
+// Other
+// -----------------------------------------------------------------------------
+@import "block/block";
+@import "content/node.page";
+@import "content/node.product-teaser";
+
+// Custom
+@import "custom/grids";
+@import "custom/forms";
+@import "custom/login";
+@import "custom/navbar";
+@import "custom/checkout";
+@import "custom/webform-progress";
+@import "custom/symptoms-checker";
+@import "custom/temperature-range";
+@import "custom/pain-range";
+@import "custom/commerce-product-variation";
+@import "custom/services";
+@import "custom/map";
+@import "custom/datepicker";
+@import "custom/confirmation";
+@import "custom/views";
+
+// @import "content/node.article";
+
+// Fix font-weight pour la toolbar admin.
+.toolbar {
+  font-weight: $font-weight-normal;
+}
+
+//Styles temporaires liés au dev.
+.plugin-container {
+  @extend .rounded;
+  @extend .p-3;
+  @extend .p-md-5;
+  background-color: #fff8eb;
+  border: 2px dashed $gray-400;
+}

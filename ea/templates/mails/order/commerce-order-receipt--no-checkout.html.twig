@@ -1,0 +1,108 @@
+{#
+/**
+ * @file
+ * Template for the order receipt.
+ *
+ * Available variables:
+ * - order_entity: The order entity.
+ * - billing_information: The billing information.
+ * - shipping_information: The shipping information.
+ * - payment_method: The payment method.
+ * - totals: An array of order totals values with the following keys:
+ *   - subtotal: The order subtotal price.
+ *   - adjustments: An array of adjustment totals:
+ *     - type: The adjustment type.
+ *     - label: The adjustment label.
+ *     - total: The adjustment total price.
+ *     - weight: The adjustment weight, taken from the adjustment type.
+ *   - total: The order total price.
+ *
+ * @ingroup themeable
+ */
+#}
+{% if state == 'completed' %}
+	<h2>{{'Hello' | t }}
+		{{ customer_profile.field_first_name.value }}
+		{{ customer_profile.field_last_name.value }},</h2>
+
+	<p>{{'Your booking has been confirmed for the following dental treatment(s):' | t }}</p>
+
+	<ul>
+		{% for service in webform_submission_data.services %}
+			<li>{{ service.label }}</li>
+		{% endfor %}
+	</ul>
+
+	<p>{{'Your Booking details are listed below:' | t }}</p>
+
+	<ul>
+		<li>{{'Clinic:' | t }}
+			{{ webform_submission_data.clinic.getName }}</li>
+		<li>{{'Address:' | t }}
+			{{ webform_submission_data.clinic.field_address.address_line1 }}
+			{{ webform_submission_data.clinic.field_address.postal_code }}
+			{{ webform_submission_data.clinic.field_address.locality }}
+		</li>
+		<li>{{'Booking date and time:' | t }}
+			{{ order_entity.field_booking_date_and_time.date | date('U') | format_date('custom', 'l j F, H:i') }}
+		</li>
+		<li>{{'Booking ID: #' | t }}{{ order_entity.getOrderNumber }}</li>
+	</ul>
+
+	<p>
+		{{'Our team will call you back revert to you on the confirmed booking date and time in xx hours. For further enquiry you could contact us through email
+@ea.com / FB Messenger fb.com/xxxx. Thank you for choosing us to serve you.' | t }}
+	</p>
+
+{% else %}
+
+	<h2>{{'Hello' | t }}
+		{{ customer_profile.field_first_name.value }}
+		{{ customer_profile.field_last_name.value }},</h2>
+
+	<p>{{'We would like to confirm receipt of your booking for the following dental treatment(s):' | t }}</p>
+
+	<ul>
+		{% for service in webform_submission_data.services %}
+			<li>{{ service.label }}</li>
+		{% endfor %}
+	</ul>
+
+	<p>{{'Your Booking details are listed below:' | t }}</p>
+
+	<ul>
+		<li>{{'Clinic:' | t }}
+			{{ webform_submission_data.clinic.getName }}</li>
+		<li>{{'Address:' | t }}
+			{{ webform_submission_data.clinic.field_address.address_line1 }}
+			{{ webform_submission_data.clinic.field_address.postal_code }}
+			{{ webform_submission_data.clinic.field_address.locality }}
+		</li>
+		<li>{{'Booking date and time (first choice):' | t }}
+			{{ order_entity.field_date_select.0.start_date | date('U')| format_date('custom', 'l j F') }}
+			{{ 'between' | t }}
+			{{ order_entity.field_date_select.0.start_date | date('U')| format_date('custom', 'H:i') }}
+			{{'and' | t }}
+			{{ order_entity.field_date_select.0.end_date | date('U') | format_date('custom', 'H:i') }}
+		</li>
+		<li>{{'Booking date and time (second choice):' | t }}
+			{{ order_entity.field_date_select.1.start_date | date('U')| format_date('custom', 'l j F') }}
+			{{ 'between' | t }}
+			{{ order_entity.field_date_select.1.start_date | date('U')| format_date('custom', 'H:i') }}
+			{{'and' | t }}
+			{{ order_entity.field_date_select.1.end_date | date('U')| format_date('custom', 'H:i') }}
+		</li>
+		<li>{{'Booking ID: #' | t }}{{ order_entity.getOrderNumber }}</li>
+	</ul>
+
+	<footer style="
+	background-color: #f4f4f4;
+	font-size: 12px;
+	text-align: center;
+	padding: 30px;
+	line-height: 150%;
+">
+		{{ footer }}
+	</footer>
+
+{% endif %}
