@@ -16,3 +16,5 @@ Pour les **thèmes enfants**, utiliser (depuis le repertoire du thème enfant):
 $ npm run sass-watch
 ```
 ⚠️ **Si des modifications sont apportées au thème parent (*ea*), il faut penser à recompiler les css des thèmes enfants afin que ces derniers bénéficient des modifications.** ⚠️
+
+## Hello!
